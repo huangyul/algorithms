@@ -30,4 +30,19 @@ func cal2(n int) {
 	}
 }
 
-func main() {}
+// 最好、最坏时间复杂度
+// n表示arr的长度
+func f1(arr []int, n int, x int) int {
+	i := 0
+	pos := -1
+	for ; i < n; i++ {
+		if arr[i] == x {
+			pos = i
+		}
+	}
+	return pos
+}
+
+func main() {
+	print(f1([]int{1, 2, 3, 4}, 4, 2))
+}
